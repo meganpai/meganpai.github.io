@@ -6,8 +6,11 @@
     <meta charset="utf-8" />
   </head>
 
-  <style>
 
+
+
+
+  <style>
 /*
   html {
     background: linear-gradient(blue, chocolate);
@@ -19,7 +22,19 @@ OR,,,
   html {
     background: url(pix/bg-02-grain.jpg) no-repeat center fixed;
     background-size: cover;
-    cursor: url(pix/wait-40.gif), auto;
+    cursor: url(pix/O_orange-01 copy.png), auto;
+  }
+
+  div {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  img {
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    height: 122px;
   }
 
   #alphabet {
@@ -27,78 +42,119 @@ OR,,,
       font-family: futura, "cheee oldskool", "Avara", "Droid Sans Mono", sans-serif;
       color: red;
   }
+
+  #cake1 {
+    height: 207px;
+  }
+
+  #cake2 {
+    height: 203px;
+    margin-top: 7px;
+  }
+
+  #onigiri {
+    height: 153px;
+    margin-top: 7px;
+  }
+
+  #brownie {
+    margin-top: 7px;
+  }
+
+  #pavlova {
+    margin-top: 7px;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .column {
+    padding: 0px;
+  }
+
+  .left {
+    float: left;
+    width: 20%;
+  }
+
+  .right {
+    float: right;
+    width: 55%;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear:both;
+  }
+
+  .subhead {
+    font-family: "Shrikhand";
+    color: black;
+    font-size: 33;
+  }
+
+  .text {
+    font-family: "Dank Mono";
+    color: black;
+    font-size: 22;
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
   </style>
 
-  <div id="alphabet">
+
+
+
+
   <body>
-      <img src="pix/C_cake-01.png" alt="cake" height="222">
-      <img src="pix/O_orange-01.png" alt="orange" height="222">
-      <img src="pix/P_pavlova-01.png" alt="orange" height="222">
-<!--
-    <p>
-      a
-      b
-      c
-      d
-      e
-      f
-      g
-      h
-      i
-      j
-      k
-      l
-      m
-      n
-      o
-      <img src="pix/onigiri.jpg" alt="onigiri" height="500">
-      p
-      q
-      r
-      s
-      t
-      u
-      v
-      w
-      x
-      y
-      z
-    </p>
+    <div class="row">
+      <div class="column left">
+        <p class="subhead">ON THE MENU</p>
+        <p class="text">brownie, cake, donut, onigiri, orange, pavlova</p>
+      </div>
 
+      <div id="alphabet" class="column right">
+        <img src="pix/C_cake-01.png" alt="cake" id="cake1" align-content:"left" display:"block" margin-left:"auto" margin-right:"500">
+      </div>
+      <div id="alphabet" class="column right">
+        <img src="pix/O_orange-01.png" id="orange" alt="orange" align-content:"left" display:"block" margin-left:"auto" margin-right:"auto">
+      </div>
+      <div id="alphabet" class="column right">
+        <img src="pix/P_pavlova-01.png" alt="pavlova" id="pavlova" align-content:"left" display:"block" margin-left:"auto" margin-right:"auto">
+      </div>
+      <div id="alphabet" class="column right">
+        <img src="pix/B_brownie-01.png" alt="brownie" id="brownie" align-content:"left">
+      </div>
+      <div id="alphabet" class="column right">
+        <img src="pix/O_onigiri-01.png" alt="onigiri" id="onigiri" align-content:"left">
+      </div>
+      <div id="alphabet" class="column right">
+        <img src="pix/C_cake-02.png" alt="cake" id="cake2" align-content:"left">
+      </div>
+      <div id="alphabet" class="column right">
+        <img src="pix/D_donut-01.png" alt="donut" align-content:"left">
+      </div>
+    </div>
 
-  </div>
+  <script>
+  function bigImg(x) {
+    x.style.height = "300px";
+  }
+  function normalImg(x) {
+    x.style.height="122px";
+  }
+  </script>
 
-
-
-
-
-
--->
   </body>
 </html>
-<!--
-      <a href="https://meganpai.com/aisthetikos-1" target="_blank">
-        <img src="images/Gud.jpg" alt="Where's the image?" height="500" align="right">
-      </a>
-    <p>
-      <h4>Stickers</h4>
-      <a href="https://meganpai.com" target="_blank" title="my portfolio">Megan Pai </a>
-    </p>
 
 
-    <h1 style="background-color:rgb(255, 99, 71);">Hello</h1>
-
-    <button onclick=""
-
-
-<script>
-function myFunction()	{
-	document.getElementByID(“panel”).style.display = “block”;
-}
-</script>
-
-<p onclick=“myFunction()”>Click to show panel</p>
-
-<p>This panel contains an element which is hidden by default (display: none).</p>
-<p>How it works: Notice that the pe element has an unlock attribute attached to it. When the user clicks on the p element, a function called myFunction() is executed, which changes the style of the div from display:none (hidden) to display:block (visible).</p>
--->
+onmouseover="bigImg(this)" onmouseout="normalImg(this)"
