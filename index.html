@@ -14,7 +14,7 @@
   }
 
   @font-face {
-    font-family: "Dank-Mono";
+    font-family: "Dank-Mono", monospace;
     src: url("assets/Dank-Mono-Italic.ttf");
     font-style: italic;
   }
@@ -79,6 +79,25 @@
   }
   .flex {
     flex-basis: fit-content;
+  }
+  .ellipse {
+    border-radius: 50%;
+    margin-left: 25%;
+  }
+  .outside {
+    font-size: 22px;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding: 0px;
+  }
+  #time {
+    font-family: "Dank-mono";
+    font-size: 17px;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding: 0px;
+    position: absolute;
+    z-index: 4;
   }
   </style>
 
@@ -163,11 +182,51 @@
   </script>
 
 
-  <body>
+  <script>
+  function checkTime(i) {
+    if (i < 10) {
+    i = "0" + i;
+  }
+    return i;
+  }
+
+  function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById("time").innerHTML = h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+  }
+  function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+  }
+  </script>
+
+
+  <body onload="startTime()">
+    <div id="time"></div>
+    <div class="outside">
+      <div id="time"></div>
+    </div>
     <div class="parent">
       <div class="box">
         <p>1</p>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <img src="pix/idk/glove.jpg" height="333px" class="ellipse">
+        <img src="pix/idk/orange.jpg" height="333px" class="ellipse">
+        <img src="pix/idk/mila.png" height="333px" class="ellipse">
+        <img src="pix/idk/plane.png" height="333px" class="ellipse">
+        <img src="pix/idk/morocco1.jpg" height="333px" class="ellipse">
+        <img src="pix/idk/morocco2.jpg" height="333px" class="ellipse">
+        <img src="pix/idk/morocco3.jpg" height="333px" class="ellipse">
+        <img src="pix/idk/morocco4.jpg" height="333px" class="ellipse">
+
+        <br><br><br><br><br><br><br><br><br><br>
         <img src="pix/B_brownie-01.png" height="100px" id="draggable1">
         <img src="pix/C_cake-01.png" height="100px" id="draggable2">
         <img src="pix/C_cake-02.png" height="100px" id="draggable3">
