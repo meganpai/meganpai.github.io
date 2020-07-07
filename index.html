@@ -12,63 +12,73 @@
     cursor: url(pix/O_orange-01 copy.png), auto;
   }
   p {
-    margin: 0px;
-    padding: 0px;
+    margin: 10px;
+    padding: 10px;
+    font-family: "Dank mono";
+    font-size: 77px;
+    width: ;
   }
-    .parent {
+  .parent {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-
-    }
-    .box {
+  }
+  .box {
       flex: 1 200px;
       margin: 2px;
       overflow: scroll;
       border-style: solid;
       border-width: thin;
-     }
+  }
 
-    .box:nth-of-type(1)  {
+  .box:nth-of-type(1)  {
        flex: 5 200px;
        height: 500px;
        padding-top: 25px;
+       padding-bottom: 25px;
        padding-left: 5px;
        background: url(pix/bg-02-grain.jpg) no-repeat;
        background-size: cover;
        border-radius: 33px;
-     }
-    .box:nth-of-type(3) {
+  }
+  .box:nth-of-type(3) {
       flex: 2 200px;
       height: 700px;
+      padding-left: 5px;
       background: url(pix/bg-02-grain.jpg) no-repeat fixed center;
       background-size: cover;
-    }
-    .box:nth-of-type(4) {
+  }
+  .box:nth-of-type(4) {
       flex: 2 200px;
       height: 700px;
+      padding-left: 5px;
       background: url(pix/bg-02-grain.jpg) no-repeat fixed;
       background-size: cover;
-    }
-    .spacer {
+  }
+  .spacer {
       flex: .75;
-    }
-    .box::-webkit-scrollbar {
+  }
+  .box::-webkit-scrollbar {
       display: none;
-    }
+  }
+  .flex {
+    flex-basis: fit-content;
+  }
     </style>
 
   <body>
-    <div class="parent white">
+    <div class="parent">
       <div class="box">
         <p>1</p>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <p>hello</p>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <p>hello again?</p>
+        <p>hello again</p>
       </div>
       <div class="spacer"></div>
-      <div class="box">2</div>
+      <div class="box">2
+        <p class="flex">What am I here for? Disco balls, mid-century furniture, egg-yolk yellow, cakes up close, glassware that’s improperly colored, or discolored maybe? But that’s part of the charm. You can find that kind of thing at the local Amvets where aging women and men with skin that’s wrinkled like raisins and dull like the yolk of a hardboiled egg roam from aisle to aisle. Or, find the same thing but shiny at the Design Store on Spring Street because you can afford to purchase the senseless prestige that comes with less time on earth.</p>
+      </div>
       <div class="box">3</div>
     </div>
 
